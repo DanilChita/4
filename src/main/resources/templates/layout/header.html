@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+<div th:fragment="sharedheader" class="fixed-top">
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <a class="navbar-brand" style="font-family: 'Courier New', monospace;
+            font-size: 24px"><b>SportStore</b></a>
+        <a class="navbar-brand" th:href="@{~/products-view}">Товари</a>
+        <a class="navbar-brand" th:href="@{~/brands-view}">Виробники</a>
+        <a class="navbar-brand" th:href="@{~/orders-view}">Мої замовлення</a>
+        <a class="navbar-brand" th:href="@{~/privacy-policy}">Про магазин</a>
+        <a class="btn btn-lg btn-danger" style="margin-left: 770px" th:href="@{~/start-page}">Вихід</a>
+    </nav>
+</div>
+
+<div th:fragment="adminsharedheader" class="fixed-top">
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <a class="navbar-brand" style="font-family: 'Courier New', monospace;
+            font-size: 24px"><b>SportStore</b></a>
+        <a class="navbar-brand" th:href="@{~/products-view-admin}">Товари</a>
+        <a class="navbar-brand" th:href="@{~/brands-view-admin}">Виробники</a>
+        <a class="navbar-brand" th:href="@{~/products-add}">Додати товар</a>
+        <a class="navbar-brand" th:href="@{~/products-manage}">Керувати товарами</a>
+        <a class="navbar-brand" th:href="@{~/orders-manage}">Замовлення</a>
+        <a class="navbar-brand" th:href="@{~/admin-add}">Додати адміністратора</a>
+        <a class="navbar-brand" th:href="@{~/privacy-policy-admin}">Про магазин</a>
+        <a class="btn btn-lg btn-danger" style="margin-left: 240px" th:href="@{~/start-page}">Вихід</a>
+    </nav>
+</div>
+</body>
+</html>
